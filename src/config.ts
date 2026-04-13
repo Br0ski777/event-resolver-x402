@@ -42,6 +42,45 @@ Do NOT use for prediction market odds -- use prediction_list_markets instead. Do
         },
         required: ["question"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "Event question evaluated"
+            },
+            "resolution": {
+              "type": "string",
+              "description": "Resolved outcome (yes/no/unresolved)"
+            },
+            "confidence": {
+              "type": "number",
+              "description": "Confidence 0-100"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              },
+              "description": "Evidence supporting resolution"
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Sources consulted"
+            },
+            "timestamp": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "question",
+            "resolution",
+            "confidence"
+          ]
+        },
     },
     {
       method: "POST",
@@ -72,6 +111,35 @@ Do NOT use for prediction market odds -- use prediction_list_markets instead. Do
         },
         required: ["claim"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "claim": {
+              "type": "string",
+              "description": "Claim verified"
+            },
+            "verdict": {
+              "type": "string",
+              "description": "Verdict (true/false/unverifiable)"
+            },
+            "confidence": {
+              "type": "number",
+              "description": "Confidence 0-100"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Supporting evidence"
+            }
+          },
+          "required": [
+            "claim",
+            "verdict",
+            "confidence"
+          ]
+        },
     },
     {
       method: "POST",
@@ -112,6 +180,39 @@ Do NOT use for crypto prices only -- use token_get_price instead. Do NOT use for
         },
         required: ["asset", "threshold", "direction"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "asset": {
+              "type": "string",
+              "description": "Asset checked"
+            },
+            "currentPrice": {
+              "type": "number",
+              "description": "Current price in USD"
+            },
+            "threshold": {
+              "type": "number",
+              "description": "Price threshold checked"
+            },
+            "direction": {
+              "type": "string",
+              "description": "Direction (above/below)"
+            },
+            "result": {
+              "type": "boolean",
+              "description": "Whether condition is met"
+            },
+            "timestamp": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "asset",
+            "currentPrice",
+            "result"
+          ]
+        },
     },
   ],
 };
