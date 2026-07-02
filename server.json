@@ -3,7 +3,7 @@
   "name": "io.github.Br0ski777/event-resolver",
   "title": "Event Resolver API",
   "description": "Resolve prediction market events. Price checks, claim verification, outcome confidence.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "websiteUrl": "https://github.com/Br0ski777/event-resolver-x402",
   "repository": {
     "url": "https://github.com/Br0ski777/event-resolver-x402",
