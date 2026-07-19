@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "POST",
       path: "/api/resolve",
-      price: "$0.005",
+      price: "$0.012",
       description: "Resolve a prediction market event/question. Aggregates multiple data sources to determine outcome with confidence score.",
       toolName: "event_resolve_outcome",
       toolDescription:
@@ -85,7 +85,7 @@ Do NOT use for prediction market odds -- use prediction_list_markets instead. Do
     {
       method: "POST",
       path: "/api/verify",
-      price: "$0.003",
+      price: "$0.008",
       description: "Quick-verify a factual claim. Returns verdict (true/false/unverifiable) with confidence and evidence.",
       toolName: "event_verify_claim",
       toolDescription:
@@ -144,7 +144,7 @@ Do NOT use for prediction market odds -- use prediction_list_markets instead. Do
     {
       method: "POST",
       path: "/api/price-check",
-      price: "$0.002",
+      price: "$0.005",
       description: "Check if a crypto/stock price crossed a threshold. Common prediction market resolution pattern.",
       toolName: "event_check_price_threshold",
       toolDescription:
