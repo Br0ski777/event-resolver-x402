@@ -37,9 +37,9 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `event_resolve_outcome` | POST | `/api/resolve` | $0.005 | Resolve a prediction market event/question. Aggregates multiple data sources to determine outcome with confidence score. |
-| `event_verify_claim` | POST | `/api/verify` | $0.003 | Quick-verify a factual claim. Returns verdict (true/false/unverifiable) with confidence and evidence. |
-| `event_check_price_threshold` | POST | `/api/price-check` | $0.002 | Check if a crypto/stock price crossed a threshold. Common prediction market resolution pattern. |
+| `event_resolve_outcome` | POST | `/api/resolve` | $0.012 | Resolve a prediction market event/question. Aggregates multiple data sources to determine outcome with confidence score. |
+| `event_verify_claim` | POST | `/api/verify` | $0.008 | Quick-verify a factual claim. Returns verdict (true/false/unverifiable) with confidence and evidence. |
+| `event_check_price_threshold` | POST | `/api/price-check` | $0.005 | Check if a crypto/stock price crossed a threshold. Common prediction market resolution pattern. |
 
 ### `event_resolve_outcome`
 
